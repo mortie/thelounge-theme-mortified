@@ -1,6 +1,6 @@
 {
   "name": "thelounge-theme-mortified",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A dark theme.",
   "main": "package.json",
   "thelounge": {
@@ -20,5 +20,6 @@
   ],
   "bugs": {
     "url": "https://github.com/mortie/thelounge-theme-mortified/issues"
-  }
+  },
+  "author": "Martin Dørum"
 }
