@@ -1,7 +1,7 @@
 {
   "name": "thelounge-theme-mortified",
   "version": "0.1.0",
-  "description": "A theme for The Lounge",
+  "description": "A dark theme.",
   "main": "package.json",
   "thelounge": {
     "css": "theme.css",
