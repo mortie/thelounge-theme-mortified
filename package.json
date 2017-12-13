@@ -1,0 +1,24 @@
+{
+  "name": "thelounge-theme-mortified",
+  "version": "0.1.0",
+  "description": "A theme for The Lounge",
+  "main": "package.json",
+  "thelounge": {
+    "css": "theme.css",
+    "name": "Mortified",
+    "type": "theme"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/mortie/thelounge-theme-mortified",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mortie/thelounge-theme-mortified.git"
+  },
+  "keywords": [
+    "thelounge",
+    "thelounge-theme"
+  ],
+  "bugs": {
+    "url": "https://github.com/mortie/thelounge-theme-mortified/issues"
+  }
+}
