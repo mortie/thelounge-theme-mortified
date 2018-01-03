@@ -23,6 +23,12 @@ BORDERS #2a323d
 QUIT #d0907d
 */
 
+.unread-marker-text::before,
+.date-marker-text::before {
+	color: #ccc !important;
+	background-color: #444 !important;
+}
+
 body {
 	color: #ccc;
 }
