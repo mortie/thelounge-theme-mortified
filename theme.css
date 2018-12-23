@@ -21,27 +21,26 @@ Mortified theme for The Lounge, by Martin Dørum.
 	border-color: black;
 }
 
-#chat .userlist .names {
+#chat .userlist .names,
+#footer {
 	border-top: 1px solid black;
 }
 
 #chat-container #form,
 #chat-container .userlist,
 #chat-container .user-mode::before {
-	background-color: #333;
+	background: #333;
 }
 
 #chat .userlist .count,
-#chat .userlist .user.active {
-	background-color: #393939;
+#chat .userlist .user.active,
+#chat .msg.motd .text,
+#chat .toggle-content {
+	background: #393939;
 }
 
 #chat-container .user-mode::before {
 	color: var(--body-color);
-}
-
-#chat .msg.motd .text {
-	background-color: #393939;
 }
 
 #chat .self .text {
