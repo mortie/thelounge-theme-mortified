@@ -1,114 +1,64 @@
 /*
 Mortified theme for The Lounge, by Martin Dørum.
-Based on Morning theme.
-
-Original header comment:
-
-Morning theme for The Lounge.
-Has a bit more eye-friendly color scheme.
-
-Installation instructions can be found here
-https://thelounge.github.io/docs/server/configuration.html#theme
-
-Author: Riku Rouvila
-GitHub: https://github.com/rikukissa
 */
 
-/*
-BACKGROUND #333c4a
-INPUT BACKGROUND #2e3642
-PRIMARY #fefefe
-SECONDARY #99a2b4
-BORDERS #2a323d
-QUIT #d0907d
-*/
+@import "default.css";
 
-.unread-marker-text::before,
-.date-marker-text::before {
-	color: #ccc !important;
-	background-color: #444 !important;
-}
-
-body {
-	color: #ccc;
-}
-
-#main,
-#chat .sidebar,
-#windows .chan,
-#windows .window {
-	background: #333c4a;
-}
-
-#windows .header .topic,
-.messages .msg,
-.sidebar {
-	font-family: inherit;
-	font-size: 13px;
-}
-
-#chat .count {
-	background-color: #2e3642;
-}
-
-#chat .search {
-	color: #ccc;
-	padding: 15px 16px;
-}
-
-#chat .search::-webkit-input-placeholder {
-	color: #99a2b4;
-	opacity: .5;
+:root {
+	--body-color-muted: #999;
+	--body-color: #fefefe;
+	--body-bg-color: #191919;
+	--window-bg-color: #222;
+	--link-color: #428bca;
 }
 
 /* Borders */
-#chat .from,
-#windows .header,
-#chat .user-mode:before,
-#chat .sidebar {
-	border-color: #2a323d;
+#chat .content,
+#windows #chat .header,
+#chat .user-mode::before,
+#chat .userlist,
+#chat-container #form {
+	border-color: black;
 }
 
-/* Attach chat to window borders */
-#windows .window:before,
-#windows .chan:before {
-	display: none;
+#chat .userlist .names {
+	border-top: 1px solid black;
 }
 
-#footer {
-	left: 0;
-	bottom: 0;
-	width: 220px;
-	border-radius: 0;
+#chat-container #form,
+#chat-container .userlist,
+#chat-container .user-mode::before {
+	background-color: #333;
 }
 
-#main {
-	top: 0;
-	bottom: 0;
-	right: 0;
+#chat .userlist .count,
+#chat .userlist .user.active {
+	background-color: #393939;
 }
 
-#windows .window {
-	border-radius: 0;
+#chat-container .user-mode::before {
+	color: var(--body-color);
 }
 
-#chat .chat,
-#chat .sidebar {
-	top: 48px;
+#chat .msg.motd .text {
+	background-color: #393939;
 }
 
-/* User list */
-#chat .user-mode {
-	color: #fefefe;
+#chat .self .text {
+	color: #99a2b4;
 }
 
-/* Nicknames */
-#chat .user {
-	color: #b0bacf;
+::placeholder {
+	color: #999;
 }
 
-#chat .user:hover {
-	color: #fefefe;
+#chat .unread-marker-text::before,
+#chat .date-marker-text::before,
+.irc-monospace,
+code {
+	font-weight: 700;
+	color: #ccc;
+	background-color: #444;
 }
 
 #chat.colored-nicks .user.color-1 { color: #f7adf7; }
@@ -143,204 +93,3 @@ body {
 #chat.colored-nicks .user.color-30 { color: #9676e2; }
 #chat.colored-nicks .user.color-31 { color: #f2a4eb; }
 #chat.colored-nicks .user.color-32 { color: #85f27d; }
-
-#chat a {
-	color: #428bca;
-}
-
-#chat button:hover {
-	opacity: 1;
-}
-
-/* Message form */
-#form {
-	background: #2a323d;
-	border-color: #242a33;
-}
-
-#windows #form .input {
-	font-family: inherit;
-	background-color: #2e3642 !important;
-	border-color: #242a33 !important;
-	color: #ccc;
-}
-
-#form #nick {
-	background: #242a33;
-	color: #ccc;
-}
-
-#form #submit:hover {
-	opacity: 1;
-}
-
-/* Buttons */
-#chat .show-more-button {
-	background: #2e3642;
-	border-color: #242a33;
-	color: #ccc;
-}
-
-#chat .show-more-button:hover {
-	color: #fff;
-}
-
-#chat .header {
-	color: #99a2b4;
-}
-
-/* Notification dot on the top right corner of the menu icon */
-#viewport .lt:after {
-	border-color: #333c4a;
-}
-
-#chat .unread-marker {
-	opacity: 1;
-}
-
-#chat .unread-marker-text:before {
-	background-color: #333c4a;
-}
-
-/* Setup text colors */
-#chat .msg {
-	color: #f3f3f3;
-}
-
-#chat .message {
-	color: #fefefe;
-}
-
-#chat .self .text {
-	color: #99a2b4;
-}
-
-#chat .error,
-#chat .error .from,
-#chat .channel .highlight,
-#chat .channel .highlight .from {
-	color: #f92772;
-}
-
-#chat .unhandled .from {
-	color: #99a2b4;
-}
-
-#chat .msg.quit .time,
-#chat .msg.quit .from button {
-	color: #d0907d !important;
-}
-
-#chat .msg.topic {
-	color: #fefefe;
-}
-
-#chat .msg.join .time,
-#chat .msg.join .from button {
-	color: #84ce88 !important;
-}
-
-/* Embeds */
-#chat .toggle-content,
-#chat .toggle-button {
-	background: #242a33;
-	color: #f3f3f3;
-}
-
-#chat .toggle-content img {
-	float: left;
-	margin-right: .5em;
-}
-
-#chat .toggle-content .body {
-	color: #99a2b4;
-}
-
-@media (max-width: 768px) {
-	#main {
-		left: 0;
-	}
-	#footer {
-		left: -220px;
-		width: 225px;
-	}
-}
-
-/* Mort Changes */
-
-.messages .msg,
-#form .input {
-	font-size: 1em !important;
-}
-#form .input {
-	height: 36px;
-}
-
-body,
-#wrap, 
-#windows .chan,
-#windows .window {
-	background: #222 !important;
-}
-
-#sidebar,
-#viewport,
-#chat .sidebar {
-	background: #333 !important;
-	border-color: black !important;
-}
-
-#footer,
-#form {
-	background: #333 !important;
-	border-color: black !important;
-}
-
-#nick {
-	background: #444 !important;
-	border: 1px solid #333 !important;
-	border-radius: 5px !important;
-	line-height: 20px !important;
-}
-
-#input {
-	white-space: pre;
-	overflow: hidden;
-}
-#chat .sidebar .users .search,
-#input,
-#windows #form .input {
-	background: #3c3c3c !important;
-}
-#chat .sidebar .users .search::-moz-placeholder {
-	color: #eee !important;
-}
-
-#sidebar .chan .name::after {
-	background: none !important;
-}
-
-#sidebar .chan.active {
-	background: #3f3f3f !important;
-}
-
-@media (min-width: 480px) {
-	/* Fade out for long usernames */
-
-	#chat .from {
-		padding-left: 10px;
-	}
-
-	#chat .from:after {
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		width: 10px;
-		height: 100%;
-		background: linear-gradient(to right, rgba(34, 34, 34, 0) 0%, rgba(34, 34, 34, 1) 100%);
-		content: " ";
-	}
-
-	/* End fade out for long usernames */
-}
-
