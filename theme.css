@@ -60,6 +60,14 @@ code {
 	background-color: #444;
 }
 
+#sidebar .scrollable-area {
+	direction: rtl;
+}
+
+#sidebar .scrollable-area * {
+	direction: initial;
+}
+
 #chat.colored-nicks .user.color-1 { color: #f7adf7; }
 #chat.colored-nicks .user.color-2 { color: #abf99f; }
 #chat.colored-nicks .user.color-3 { color: #86efdc; }
