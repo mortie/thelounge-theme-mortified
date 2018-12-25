@@ -10,6 +10,8 @@ Mortified theme for The Lounge, by Martin Dørum.
 	--body-bg-color: #191919;
 	--window-bg-color: #222;
 	--link-color: #428bca;
+	--highlight-bg-color: #191919;
+	--highlight-border-color: var(--highligt-bg-color);
 }
 
 /* Borders */
@@ -66,6 +68,17 @@ code {
 
 #sidebar .scrollable-area * {
 	direction: initial;
+}
+
+#chat .channel .highlight,
+#chat .channel .highlight .from {
+	color: #f92772;
+}
+
+#chat .time,
+#chat .channel .message.highlight .time {
+	padding-left: 10px;
+	width: 55px;
 }
 
 #chat.colored-nicks .user.color-1 { color: #f7adf7; }
