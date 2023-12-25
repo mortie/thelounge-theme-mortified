@@ -55,11 +55,14 @@ Mortified theme for The Lounge, by Martin Dørum.
 
 #chat .unread-marker-text::before,
 #chat .date-marker-text::before,
-.irc-monospace,
 code {
 	font-weight: 700;
 	color: #ccc;
 	background-color: #444;
+}
+
+#chat .msg[data-type="monospace_block"] .text {
+	background: #191919;
 }
 
 #sidebar .scrollable-area {
